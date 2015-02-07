@@ -2,4 +2,4 @@
 # bin/compile <build-dir> <cache-dir>
 
 echo "-----> Preparing to compress"
-python $MANAGE_FILE compress 
+python manage.py compress 

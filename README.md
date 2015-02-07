@@ -1,2 +1,2 @@
 # heroku-buildpack-peach-extras
-Buildpack containing extra command for Peach Server startup
+Buildpack containing extra commands for Peach Server startup

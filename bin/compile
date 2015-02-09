@@ -52,11 +52,6 @@ export PKG_CONFIG_PATH=/app/.heroku/vendor/lib/pkg-config:$BUILD_DIR/.heroku/ven
 cd $BUILD_DIR
 
 
-# If no requirements given, assume `setup.py develop`.
-if [ ! -f requirements.txt ]; then
-  echo "-e ." > requirements.txt
-fi
-
 # Sticky runtimes.
 if [ -f $CACHE_DIR/.heroku/python-version ]; then
   DEFAULT_PYTHON_VERSION=$(cat $CACHE_DIR/.heroku/python-version)
@@ -69,6 +64,8 @@ if [ ! -f runtime.txt ]; then
 fi
 
 source $BIN_DIR/utils
+
+ls staticfiles
 
 
 MANAGE_FILE=$(find . -maxdepth 3 -type f -name 'manage.py' | head -1)

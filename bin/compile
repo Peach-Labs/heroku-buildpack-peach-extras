@@ -68,7 +68,7 @@ if [ ! -f runtime.txt ]; then
   echo $DEFAULT_PYTHON_VERSION > runtime.txt
 fi
 
-
+source $BIN_DIR/utils
 
 
 MANAGE_FILE=$(find . -maxdepth 3 -type f -name 'manage.py' | head -1)

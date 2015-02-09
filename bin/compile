@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir>
+# Paths.
+BIN_DIR=$(cd $(dirname $0); pwd) # absolute path
+ROOT_DIR=$(dirname $BIN_DIR)
+BUILD_DIR=$1
 
 echo "-----> Preparing to compress"
-python manage.py compress 
+python $BUILD_DIR/manage.py compress 
